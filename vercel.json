@@ -1,0 +1,12 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": "apps/web/dist",
+  "devCommand": "pnpm web:dev",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "env": {
+    "VITE_SUPABASE_URL": "@supabase-url",
+    "VITE_SUPABASE_ANON_KEY": "@supabase-anon-key",
+    "VITE_API_URL": "@api-url"
+  }
+}
