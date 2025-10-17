@@ -1,0 +1,33 @@
+{
+  "name": "kplan",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./apps/*\" dev",
+    "build": "pnpm --recursive build",
+    "start": "pnpm --filter @kplan/api start",
+    "typecheck": "pnpm --recursive typecheck",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "ci": "pnpm lint && pnpm typecheck && pnpm --recursive test",
+    "api:dev": "pnpm --filter @kplan/api dev",
+    "api:test": "pnpm --filter @kplan/api test",
+    "web:dev": "pnpm --filter @kplan/web dev",
+    "web:build": "pnpm --filter @kplan/web build",
+    "web:test": "pnpm --filter @kplan/web test",
+    "db:gen": "echo 'Create migration files in apps/api/supabase/migrations'",
+    "db:push": "supabase db push",
+    "db:reset": "supabase db reset",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.3"
+  }
+}
